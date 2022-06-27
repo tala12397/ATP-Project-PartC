@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane  prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
+   <children>
+      <TextArea editable="false" layoutX="122.0" layoutY="93.0" prefHeight="265.0" prefWidth="408.0" text="welcome to Prison-Break Game!&#10;&#10;The goal of the game is help Michael Scofield &#10;get to his brother.&#10;&#10;buttoms:&#10;8 - UP&#10;2 - DOWN&#10;6 - RIGHT&#10;4 - LEFT&#10;9 - UP &amp; RIGHT&#10;7 - UP &amp; LEFT&#10;1 - DOWN &amp; LEFT&#10;3 - DOWN &amp; RIGHT" />
+   </children>
+</AnchorPane>

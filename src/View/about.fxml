@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
+   <children>
+      <TextArea editable="false" layoutX="207.0" layoutY="92.0" prefHeight="229.0" prefWidth="306.0" text="hello!&#10;Name: Tal Abraham - טל אברהם&#10;ID: 208980920&#10;&#10;Details:&#10;1. generate maze algorithm: MyMazeGenerator&#10;2. solving maze algorithm:  BestFirstSearch&#10;&#10;" />
+   </children>
+</AnchorPane>
