@@ -4,31 +4,39 @@ import Model.MyModel;
 import ViewModel.MyViewModel;
 import algorithms.mazeGenerators.MyMazeGenerator;
 import algorithms.mazeGenerators.Maze;
+import javafx.application.Platform;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.input.KeyEvent;
+import javafx.scene.input.*;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.Media;
 import javafx.scene.control.MenuItem;
 import java.io.*;
 import java.net.URL;
+import java.net.UnknownHostException;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.Optional;
 import java.util.ResourceBundle;
-import javafx.scene.input.MouseDragEvent;
-import javafx.stage.Stage;
-import java.lang.String;
 
+import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
+
+import java.lang.String;
+import javax.swing.JOptionPane;
+import javax.swing.JFrame;
+
+/**
+ * the controller class
+ */
 public class MyViewController implements Initializable, Observer {
 
     public void initialize(URL location, ResourceBundle resources) {
@@ -50,6 +58,7 @@ public class MyViewController implements Initializable, Observer {
 
     public MazeDisplayer mazeDisplayer;
     private MyModel model;
+    int count = 0;
 
 
     public void ask_for_help(ActionEvent actionEvent) {
@@ -61,14 +70,20 @@ public class MyViewController implements Initializable, Observer {
             return;
         if (viewModel.getMaze() == null)
             return;
-        viewModel.solvemaze(maze);
+        if (count == 0) {
+            viewModel.solvemaze(maze);
+            count++;
+        }
     }
 
     public void back_to_maze(ActionEvent actionEvent) {
         mazeDisplayer.back_to_maze();
+        if (count > 0)
+            count--;
     }
 
     public void play_music_problem() {
+
         try {
             Media media = new Media(new File("Resources/music/error_music.mp3").toURI().toString());
             this.mediaProblem = new MediaPlayer(media);
@@ -83,9 +98,9 @@ public class MyViewController implements Initializable, Observer {
         this.mediaProblem.stop();
     }
 
-    public void generateMaze(ActionEvent actionEvent) {
+    public void generateMaze(ActionEvent actionEvent) throws UnknownHostException {
 
-
+        count = 0;
         if (this.generator == null) {
             this.generator = new MyMazeGenerator();
         }
@@ -152,7 +167,7 @@ public class MyViewController implements Initializable, Observer {
 
     }
 
-    public void set_Resize(Scene scene) {
+    public void resize(Scene scene) {
         this.mazeDisplayer.widthProperty().bind(mypane_a.widthProperty());
         this.mazeDisplayer.heightProperty().bind(mypane_a.heightProperty());
         scene.widthProperty().addListener((observable, oldValue, newValue) -> {
@@ -163,9 +178,6 @@ public class MyViewController implements Initializable, Observer {
             this.mazeDisplayer.heightProperty().bind(mypane_a.heightProperty());
 
         });
-
-
-
 
     }
 
@@ -213,38 +225,31 @@ public class MyViewController implements Initializable, Observer {
     }
 
     public void move_with_mouse(MouseEvent DragEvent) {
-        if (viewModel.getMaze() == null)
+
+        int mousex = (int) (DragEvent.getX() / (mazeDisplayer.getWidth() / viewModel.getMaze().get_length_col()));
+        int mousey = (int) (DragEvent.getY() / (mazeDisplayer.getHeight() / viewModel.getMaze().get_length_row()));
+        int playercol = viewModel.getColCar();
+        int playerrow = viewModel.getRowCar();
+        if (mousex > playercol) { //right
+            this.viewModel.movechar(102);
             return;
-        String s = DragEvent.getButton().name().toString();
-        double mouseX = DragEvent.getX();//this.mazeDisplayer.getScaleX() ;
-        double mouseY = DragEvent.getY();//this.mazeDisplayer.getScaleY();
-        double scaley = mypane_a.getWidth()-this.mazeDisplayer.my_col_pos*5.0;
-        double scalex = mypane_a.getHeight()-this.mazeDisplayer.my_row_pos*5.0;
-            if (mouseX< scalex) { //left
-                this.viewModel.movechar(100);
-                return;
-            }
+        }
+        if (mousex < playercol) {//left
+            this.viewModel.movechar(100);
+            return;
+        }
+        if (mousey > playerrow) {//down
+            this.viewModel.movechar(98);
+            return;
 
-            if (mouseX > scalex) { //right
-                this.viewModel.movechar(102);
-                return;
-
-            }
-
-            if (mouseY < scaley) { //up
-                this.viewModel.movechar(104);
-                return;
-            }
-
-            if (mouseY >scaley) {//down
-                this.viewModel.movechar(98);
-                return;
-            }
-
+        }
+        if (mousey < playerrow) {//up
+            this.viewModel.movechar(104);
+            return;
+        }
 
 
     }
-
 
 
     public void HELP_user(ActionEvent actionEvent) {
@@ -290,6 +295,23 @@ public class MyViewController implements Initializable, Observer {
         }
     }
 
+    public void exit_game(ActionEvent actionEvent) {
+        Alert a = new Alert(Alert.AlertType.CONFIRMATION);
+        a.setTitle("exit");
+        a.setContentText("are you sure you want to exit?");
+        Optional<ButtonType> result = a.showAndWait();
+        if (result.get() == ButtonType.OK) {
+            this.viewModel.exit_game();
+            System.exit(0);
+        }
+    }
 
+    @FXML
+    public void exitApplication(WindowEvent event) {
+        this.viewModel.exit_game();
+        System.exit(0);
 
+    }
 }
+
+

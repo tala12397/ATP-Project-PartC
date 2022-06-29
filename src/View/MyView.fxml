@@ -64,7 +64,10 @@
                                 <MenuItem mnemonicParsing="false" onAction="#properties" text="Properties" />
                             </items>
                         </Menu>
-                        <Menu mnemonicParsing="false" text="Exit" />
+                        <Menu mnemonicParsing="false" text="Exit">
+                     <items>
+                        <MenuItem fx:id="menu_inside_exit" mnemonicParsing="false" onAction="#exit_game" text="Exit" />
+                     </items></Menu>
                   <Menu mnemonicParsing="false" text="Help">
                      <items>
                         <MenuItem mnemonicParsing="false" onAction="#HELP_user" text="help" />

@@ -10,11 +10,15 @@ import static java.awt.event.KeyEvent.*;
 
 import javafx.scene.input.KeyEvent;
 
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 import javafx.scene.input.KeyCode;
 
+/**
+ * Myview model class, connect between the model and view.
+ */
 public class MyViewModel extends Observable implements Observer {
 
     public IModel getModel() {
@@ -73,7 +77,7 @@ public class MyViewModel extends Observable implements Observer {
 
 
     }
-    public void generateMaze(int row, int col){
+    public void generateMaze(int row, int col) throws UnknownHostException {
         if(row<0 || col<0) {
             return;
         }
@@ -100,6 +104,9 @@ public class MyViewModel extends Observable implements Observer {
     }
     public void loadGame(){
         model.loadGame();
+    }
+    public void exit_game(){
+        this.model.exit_game();
     }
 
 

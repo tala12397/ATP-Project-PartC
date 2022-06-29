@@ -19,14 +19,20 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Optional;
 
-
+/**
+ * class which it goal is to display the game
+ */
 public class MazeDisplayer extends Canvas {
     private Maze maze;
-    int count_help = 0;
+    //int count_help = 0;
     public void set_player_pos(int row, int col) {
         this.my_row_pos =row;
         this.my_col_pos = col;
         draw();
+    }
+    public MazeDisplayer(){
+        widthProperty().addListener(evt -> draw());
+        heightProperty().addListener(evt -> draw());
     }
 
     int my_row_pos;
@@ -79,8 +85,24 @@ public class MazeDisplayer extends Canvas {
         return my_col_pos;
     }
     int goal_col_pos;
-    public void drawMaze(Maze maze) {
 
+    @Override
+    public boolean isResizable() {
+        return true;
+    }
+
+    @Override
+    public double prefWidth(double height) {
+        return getWidth();
+    }
+
+    @Override
+    public double prefHeight(double width) {
+        return getHeight();
+    }
+    public void drawMaze(Maze maze) {
+        if(maze==null)
+            return;
         stop_music_solving();
         stop_music_solved();
         this.maze = maze;
@@ -94,9 +116,6 @@ public class MazeDisplayer extends Canvas {
     public void help_to_user(Maze maze){
         if(maze==null)
             return;
-        if(count_help!=0)
-            return;
-
 
         ISearchable is = new SearchableMaze(maze);
         ASearchingAlgorithm a = new BestFirstSearch();
@@ -112,16 +131,16 @@ public class MazeDisplayer extends Canvas {
             if( sol_list.get(i).getRowIndex()!=this.my_row_pos ||  sol_list.get(i).getColumnIndex()!=this.my_col_pos) {
                 if(sol_list.get(i).getRowIndex()!=maze.getGoalPosition().getRowIndex() ||  sol_list.get(i).getColumnIndex()!=maze.getGoalPosition().getColumnIndex()) {
                     graphicsContext.setFill(Color.RED);
-                    double x = sol_list.get(i).getColumnIndex() * cellHeight;
+                    double x = sol_list.get(i).getColumnIndex() * cellWidth;
                     double y = sol_list.get(i).getRowIndex() * cellHeight;
                     graphicsContext.setFill(Color.GREEN);
+                    //graphicsContext.fillRect(x, y, cellWidth, cellHeight);
                     graphicsContext.fillRect(x, y, cellWidth, cellHeight);
                 }
             }
 
         }
 
-        count_help++;
 
 
     }
@@ -139,7 +158,6 @@ public class MazeDisplayer extends Canvas {
 
     }
     public void stop_music_solving(){
-        //this.mediaPlayer.pause();
         if(this.mediaPlayer==null)
             return;
         this.mediaPlayer.stop();
@@ -175,8 +193,6 @@ public class MazeDisplayer extends Canvas {
     }
     public void back_to_maze(){
         draw();
-        if(count_help>0)
-            count_help--;
     }
     public void clear_all(){
         double canvasHeight = getHeight();
@@ -189,7 +205,7 @@ public class MazeDisplayer extends Canvas {
 
     public void draw() {
         if(maze != null){
-            count_help = 0;
+            //count_help = 0;
             double canvasHeight = getHeight();
             double canvasWidth = getWidth();
             int rows = maze.get_length_row();
@@ -203,7 +219,6 @@ public class MazeDisplayer extends Canvas {
             Image wallimage = null;
             try{
                 wallimage = new Image(new FileInputStream(getWall_property()));
-                //wallimage = new Image(new FileInputStream("src/Resources/Images/wall.jpg"));
             }
             catch (FileNotFoundException e){
                 System.out.println("File not found...");
