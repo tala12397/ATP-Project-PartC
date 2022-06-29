@@ -71,8 +71,13 @@ public class MyViewController implements Initializable, Observer {
         if (viewModel.getMaze() == null)
             return;
         if (count == 0) {
-            viewModel.solvemaze(maze);
-            count++;
+            try {
+                viewModel.solvemaze(maze);
+                count++;
+            }
+            catch (Exception e){
+
+            }
         }
     }
 
@@ -125,11 +130,11 @@ public class MyViewController implements Initializable, Observer {
             }
             return;
         }
-        if (row > 1000) {
-            row = 1000;
+        if (row > 100) {
+            row = 100;
         }
-        if (col > 1000) {
-            col = 1000;
+        if (col > 100) {
+            col = 100;
         }
         if (row <= 0 || col <= 0) {
             Alert input = new Alert(Alert.AlertType.ERROR);

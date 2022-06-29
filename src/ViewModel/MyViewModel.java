@@ -93,7 +93,7 @@ public class MyViewModel extends Observable implements Observer {
         this.model.update_car(keyevent);
 
     }
-    public void solvemaze(Maze maze){
+    public void solvemaze(Maze maze) throws UnknownHostException {
         this.model.solve_maze(maze);
     }
     public void getSolution(){

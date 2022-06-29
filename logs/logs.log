@@ -1,0 +1,89 @@
+2022.06.29 12:35:17.075 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400
+2022.06.29 12:35:18.273 INFO  Model.MyModel - Client who asked for help: DESKTOP-FAAQT02/192.168.254.1 with port:5401
+2022.06.29 12:35:19.937 INFO  Model.MyModel - Client who asked for help: DESKTOP-FAAQT02/192.168.254.1 with port:5401
+2022.06.29 12:35:20.887 INFO  Model.MyModel - Client who asked for help: DESKTOP-FAAQT02/192.168.254.1 with port:5401
+2022.06.29 12:35:23.353 INFO  Model.MyModel - servers stopped
+2022.06.29 13:23:40.108 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400 maze size:10, 10
+2022.06.29 13:23:51.503 INFO  Model.MyModel - servers stopped
+2022.06.29 13:24:15.907 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400 maze size:[10,10]
+2022.06.29 13:24:21.255 INFO  Model.MyModel - servers stopped
+2022.06.29 13:24:32.855 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[10,10]
+2022.06.29 13:24:35.975 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[10,10]
+2022.06.29 13:24:36.902 INFO  Model.MyModel - Client who asked for help: DESKTOP-FAAQT02/192.168.254.1 with port:5401
+2022.06.29 13:24:39.967 INFO  Model.MyModel - Client who asked for help: DESKTOP-FAAQT02/192.168.254.1 with port:5401
+2022.06.29 13:24:40.862 INFO  Model.MyModel - Client who asked for help: DESKTOP-FAAQT02/192.168.254.1 with port:5401
+2022.06.29 13:24:41.670 INFO  Model.MyModel - Client who asked for help: DESKTOP-FAAQT02/192.168.254.1 with port:5401
+2022.06.29 13:24:42.167 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[10,10]
+2022.06.29 13:24:48.286 INFO  Model.MyModel - maze saved
+2022.06.29 13:24:53.601 INFO  Model.MyModel - servers stopped
+2022.06.29 13:25:40.552 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[10,10]
+2022.06.29 13:25:44.467 INFO  Model.MyModel - maze saved under the name:taltal.maze
+2022.06.29 13:25:56.550 INFO  Model.MyModel - servers stopped
+2022.06.29 13:26:54.205 INFO  Model.MyModel - maze taltal.maze loaded
+2022.06.29 13:27:02.558 INFO  Model.MyModel - maze savedMaze.maze loaded
+2022.06.29 13:27:05.066 INFO  Model.MyModel - servers stopped
+2022.06.29 13:27:31.871 INFO  Model.MyModel - maze taltal.maze loaded
+2022.06.29 13:27:37.127 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[10,10]
+2022.06.29 13:27:39.946 INFO  Model.MyModel - Client who asked for help: DESKTOP-FAAQT02/192.168.254.1 with port:5401
+2022.06.29 13:27:48.974 INFO  Model.MyModel - maze saved under the name:test.maze
+2022.06.29 13:27:53.989 INFO  Model.MyModel - servers stopped
+2022.06.29 13:29:29.141 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,20]
+2022.06.29 13:30:03.616 INFO  Model.MyModel - Client who asked for help: DESKTOP-FAAQT02/192.168.254.1 with port:5401
+2022.06.29 13:30:11.700 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,20]
+2022.06.29 13:30:50.417 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:03.365 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:04.783 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:06.391 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:07.183 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:08.063 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:08.246 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:08.429 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:08.566 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:08.696 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:09.375 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:09.471 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:09.629 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:09.772 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:09.918 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:10.094 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:10.262 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:10.673 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:11.098 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:11.818 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:54.111 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:54.536 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:54.842 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:55.026 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:31:55.960 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:32:11.133 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[20,15]
+2022.06.29 13:32:36.398 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[50,15]
+2022.06.29 13:32:46.527 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[50,50]
+2022.06.29 13:34:24.260 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[1000,1000]
+2022.06.29 13:34:45.155 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[500,500]
+2022.06.29 13:34:52.904 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[400,400]
+2022.06.29 13:34:58.172 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[300,300]
+2022.06.29 13:35:03.536 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[200,200]
+2022.06.29 13:35:18.480 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[100,100]
+2022.06.29 13:35:29.035 INFO  Model.MyModel - Client who asked for help: DESKTOP-FAAQT02/192.168.254.1 with port:5401
+2022.06.29 13:37:53.916 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[100,100]
+2022.06.29 13:37:57.339 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[10,100]
+2022.06.29 13:38:20.784 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[50,100]
+2022.06.29 13:38:26.770 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[75,100]
+2022.06.29 13:38:31.603 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[75,75]
+2022.06.29 13:38:35.885 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[3,75]
+2022.06.29 13:38:53.572 INFO  Model.MyModel - servers stopped
+2022.06.29 13:40:03.760 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[10,10]
+2022.06.29 13:40:18.229 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[100,100]
+2022.06.29 13:40:21.336 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[100,100]
+2022.06.29 13:40:24.537 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[10,10]
+2022.06.29 13:40:31.742 INFO  Model.MyModel - servers stopped
+2022.06.29 13:40:44.447 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[10,10]
+2022.06.29 13:40:47.709 INFO  Model.MyModel - servers stopped
+2022.06.29 13:41:03.104 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[10,10]
+2022.06.29 13:41:07.037 INFO  Model.MyModel - servers stopped
+2022.06.29 13:41:34.337 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[10,10]
+2022.06.29 13:41:36.784 INFO  Model.MyModel - servers stopped
+2022.06.29 13:41:56.633 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[10,10]
+2022.06.29 13:42:03.874 INFO  Model.MyModel - servers stopped
+2022.06.29 13:42:21.048 INFO  Model.MyModel - Client start solving: DESKTOP-FAAQT02/192.168.254.1 with port:5400. maze size:[10,10]
+2022.06.29 13:42:27.865 INFO  Model.MyModel - servers stopped

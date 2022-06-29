@@ -21,6 +21,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Observable;
 import java.util.Observer;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.config.Configurator;
+
+
 import Client.Client;
 import Client.IClientStrategy;
 import Server.Server;
@@ -42,6 +48,7 @@ public class MyModel extends Observable implements IModel{
     Solution solution;
     Server generate_maze_Server;
     Server solve_maze_Server;
+    private static final Logger LOG = LogManager.getLogger();
 
     public int getRow_car() {
         return row_car;
@@ -63,6 +70,14 @@ public class MyModel extends Observable implements IModel{
         this.solve_maze_Server = new Server(5401,1000, new ServerStrategySolveSearchProblem());
         this.solve_maze_Server.start();
     }
+    public void INFO_writeToLog(String str){
+        Configurator.setRootLevel(Level.INFO);
+        LOG.info(str);
+    }
+    public void error_writeToLog(String str){
+        Configurator.setRootLevel(Level.ERROR);
+        LOG.info(str);
+    }
 
     /**
      * close the servers in exit
@@ -70,6 +85,7 @@ public class MyModel extends Observable implements IModel{
     public void Servers_Stop(){
         this.generate_maze_Server.stop();
         this.solve_maze_Server.stop();
+        INFO_writeToLog("servers stopped");
     }
 
     /**
@@ -204,6 +220,7 @@ public class MyModel extends Observable implements IModel{
         catch (Exception e){
             System.out.println("problem with servers");
         }
+        INFO_writeToLog("Client start solving: "+InetAddress.getLocalHost()+" with port:" + 5400 + ". maze size:[" + row + ","+col+"]");
     }
     public Maze getMaze(){
         return this.maze;
@@ -216,7 +233,7 @@ public class MyModel extends Observable implements IModel{
      * generete the solution for helping the user
      * @param maze the maze to solve
      */
-    public void solve_maze(Maze maze){
+    public void solve_maze(Maze maze) throws UnknownHostException {
         try {
             if (maze == null)
                 return;
@@ -244,6 +261,7 @@ public class MyModel extends Observable implements IModel{
         catch (Exception e){
             System.out.println("problem with servers");
         }
+        INFO_writeToLog("Client who asked for help: "+InetAddress.getLocalHost()+" with port:" + 5401);
 
     }
     public Solution getSolution(){
@@ -270,10 +288,11 @@ public class MyModel extends Observable implements IModel{
 
 
             } catch (Exception e){
-                System.out.println("problem");
+                error_writeToLog("problem to save this maze");
             }
 
         }
+        INFO_writeToLog("maze saved under the name:" + file.getName());
 
     }
 
@@ -301,16 +320,20 @@ public class MyModel extends Observable implements IModel{
                 notifyObservers("generated maze");
                 notifyObservers("got help");
                 notifyObservers("player moved");
+                INFO_writeToLog("maze " + file.getName() + " loaded");
 
 
             } catch (Exception e){
+                error_writeToLog("problem to load this maze");
                 Alert a = new Alert(Alert.AlertType.ERROR);
                 a.setTitle("problem");
                 a.setContentText("problem to load the file");
                 a.showAndWait();
+
             }
 
         }
+
     }
     public void exit_game(){
         Servers_Stop();

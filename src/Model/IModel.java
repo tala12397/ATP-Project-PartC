@@ -20,7 +20,7 @@ public interface IModel {
     public Maze getMaze();
     public int getRow_car();
     public void assign_obs(Observer o);
-    public void solve_maze(Maze maze);
+    public void solve_maze(Maze maze) throws UnknownHostException;
     public Solution getSolution();
     public void loadGame();
     public void exit_game();
